@@ -47,3 +47,15 @@ const search2 = (query) => {
         item.age.includes(query);
     })
 }
+
+
+// Playground. Tienes un array con palabras, tu desafío es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
+
+function solution(array) {
+	return array.filter(word => word.length >= 4);
+}; 
+
+const myArray = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+console.log("myArray", myArray);
+console.log("solution", solution(myArray));
