@@ -1,5 +1,4 @@
 const numbers = [1, 7, 3, 9];
-
 let rta = false;
 for (let i = 0; i < numbers.length; i++) {
     const element = numbers[i];
@@ -9,7 +8,6 @@ for (let i = 0; i < numbers.length; i++) {
     }
 }
 console.log("rta: ", rta);
-
 const rta2 = numbers.some(item => item % 2 === 0);
 console.log("rta2: ", rta2);
 
@@ -21,7 +19,6 @@ const orders = [
     {customerName:"Valentina",total:240,delivered:true,},
     {customerName:"Nicolas",total:2322,delivered:false,},
 ];
-
 const rta3 = orders.some(item => item.delivered);
 console.log("rta3: ", rta3);
 
@@ -60,3 +57,10 @@ const isOverlap = (newDate) => {
     })
 };
 console.log("isOverlap: ", isOverlap(newAppointment));
+
+// Playground números par
+function solution(numbers) {
+  return numbers.some( i => i % 2 === 0)// Tu código aquí 👈 
+}; 
+
+console.log("solution: ", solution([2]));
