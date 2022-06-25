@@ -15,3 +15,11 @@ for (let index = 0; index < pets.length; index++) {
 const rta = pets.includes('dog');
 console.log("for", includeInArray);
 console.log("includes", rta);
+
+// Playground
+function solution(words, query) {
+	const result = words.filter(word => {
+		return word.includes(query);
+	});
+	return result;
+};
