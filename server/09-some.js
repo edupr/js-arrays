@@ -10,5 +10,14 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log("for ", rta);
-const rta2 = numbers.every(element => element <= 40);
+const rta2 = numbers.every(element => element < 40);
 console.log("every ", rta2);
+
+// Playground
+// Validar si todos los números son pares, con every
+
+function solution(numbers) {
+    return numbers.every(element => element % 2 === 0);
+}
+
+console.log(solution([2,4,6,9]));
