@@ -13,8 +13,8 @@ const rta2 = users.flatMap(user => user.attributes);
 const calendars = {
     primaryCalendar: [
       {
-        startDate: new Date(2021, 1, 1, 15),
-        endDate: new Date(2021, 1, 1, 15, 30),
+        startDate: new Date(2021, 1, 1, 0),
+        endDate: new Date(2021, 1, 1, 0, 30),
         title: "Cita 1",
       },
       {
@@ -39,4 +39,11 @@ const calendars = {
 
 // Reto: Obtener un array con todas las citas de inicio de todos los calendarios
 const rtaReto = Object.values(calendars).flat().map(item => item.startDate);
-console.log(rtaReto);
+// console.log(rtaReto);
+
+const reto1 = Object.values(calendars);
+const reto2 = reto1.flat();
+const reto3 = reto2.map(item => item.startDate);
+console.log("reto1:", reto1); // pasamos un objeto a un array
+console.log("reto2:", reto2); // aplanamos con flat() el array
+console.log("reto3:", reto3); // nos quedamos con los startDate
