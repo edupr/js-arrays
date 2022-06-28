@@ -37,3 +37,18 @@ productsV2[productIndexV2] = {      // Fusionar y actualizar
     ...update.changes,
 };
 console.log(productsV2);
+
+// Reto 1: eliminar un producto sin modificar original
+const products2 = products.filter(p => p.id !="🍔");
+
+// Reto 2: Modificar una nueva lista sin modificar la original
+// Solución: copiar solo los elementos para que no tengan la misma dirección de memoria.
+products.map(item => {
+    if (item.id === update.id) {
+      return {
+        ...item,
+        ...changes,
+      }
+    }
+    return {...item};
+  });
